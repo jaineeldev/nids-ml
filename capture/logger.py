@@ -1,8 +1,8 @@
 # capture/logger.py
 # -------------------------------------------------------
 # OWNER: Jaineel (packet logging & data export)
-# CONTRIBUTOR: Nicholas — logged CSV data feeds directly
-#              into his ML training pipeline
+# NOTE FOR NICHOLAS: the CSV files generated here feed
+#                    directly into your ML training pipeline
 # -------------------------------------------------------
 
 import csv
@@ -23,7 +23,7 @@ def get_log_filename():
 
 
 # creates the CSV file and writes the header row
-# these columns are what Nicholas's ML model will train on
+# NOTE FOR NICHOLAS: these are the columns your model will train on
 def init_log_file(filename):
     with open(filename, "w", newline="") as f:
         writer = csv.writer(f)
@@ -41,8 +41,7 @@ def init_log_file(filename):
 
 
 # extracts features from a packet and appends them to the CSV
-# Jaineel: handles extraction
-# Nicholas: these features will be used for ML classification
+# NOTE FOR NICHOLAS: these features will be used for ML classification
 def log_packet(packet, filename):
     # skip packets that don't have an IP layer
     if IP not in packet:

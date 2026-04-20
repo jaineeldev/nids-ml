@@ -1,8 +1,8 @@
 # capture/sniffer.py
 # -------------------------------------------------------
 # OWNER: Jaineel (packet capture & infrastructure)
-# CONTRIBUTOR: Nicholas can help with feature extraction
-#              once capture is working
+# NOTE FOR NICHOLAS: feature extraction can be added
+#                    to process_packet() once capture is working
 # -------------------------------------------------------
 
 from scapy.all import sniff, IP, TCP, UDP
@@ -11,8 +11,7 @@ from capture.logger import init_log_file, get_log_filename, log_packet
 
 
 # called automatically for every packet captured
-# Jaineel: handles raw packet parsing
-# Nicholas: will later extract ML features from each packet
+# handles raw packet parsing and hands off to logger
 def process_packet(packet, filename):
     if IP in packet:
         src_ip = packet[IP].src        # where the packet came from
@@ -22,10 +21,10 @@ def process_packet(packet, filename):
 
         print(f"[{timestamp}] {protocol} | {src_ip} --> {dst_ip}")
 
-        # log the packet to CSV for Nicholas's ML pipeline
+        # log the packet to CSV
         log_packet(packet, filename)
 
-        
+
 # starts the packet sniffer and logger together
 # interface: which network interface to listen on (None = default)
 # count: how many packets to capture before stopping
