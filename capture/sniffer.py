@@ -7,7 +7,7 @@
 
 from scapy.all import sniff, IP, TCP, UDP
 from datetime import datetime
-from logger import init_log_file, get_log_filename, log_packet
+from capture.logger import init_log_file, get_log_filename, log_packet
 
 
 # called automatically for every packet captured
@@ -24,6 +24,8 @@ def process_packet(packet, filename):
 
         # log the packet to CSV for Nicholas's ML pipeline
         log_packet(packet, filename)
+
+        
 # starts the packet sniffer and logger together
 # interface: which network interface to listen on (None = default)
 # count: how many packets to capture before stopping
