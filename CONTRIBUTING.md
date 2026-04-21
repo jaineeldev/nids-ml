@@ -2,8 +2,6 @@
 
 This document is primarily for **Nicholas Ng** (@NicholasNg380) — it explains the project structure, how to get set up, and exactly what needs to be built on the ML side.
 
----
-
 ## Project structure
 
 ```
@@ -26,8 +24,6 @@ nids-ml/
 ├── main.py            # entry point — run this to start the NIDS
 └── requirements.txt   # Python dependencies
 ```
-
----
 
 ## Getting set up
 
@@ -70,8 +66,6 @@ git checkout -b feature/model-training
 git push origin feature/model-training
 ```
 
----
-
 ## Syncing with main before each session
 
 Always run these before starting work:
@@ -82,9 +76,6 @@ git pull origin main
 git checkout feature/model-training
 git merge main
 ```
-
----
-
 ## Running the project
 
 Capture packets and preprocess:
@@ -105,8 +96,6 @@ py dashboard/app.py
 ```
 
 Then open http://127.0.0.1:5000 in your browser.
-
----
 
 ## What Nicholas needs to build
 
@@ -137,8 +126,6 @@ Once the model is trained, build a predictor that:
 
 Once predictions are working, let Jaineel know and he will add a Prediction column to the dashboard table.
 
----
-
 ## Branch and PR workflow
 
 - Never commit directly to main
@@ -146,8 +133,6 @@ Once predictions are working, let Jaineel know and he will add a Prediction colu
 - Push your branch: git push origin feature/your-feature
 - Open a Pull Request on GitHub when the feature is ready
 - Tag @jaineeldev for review
-
----
 
 ## Questions?
 
