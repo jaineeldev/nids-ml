@@ -16,7 +16,7 @@ OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dat
 # loads the most recent CSV capture file from the data folder
 def load_latest_capture():
     # get all CSV files in the data folder
-    csv_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
+    csv_files = [f for f in os.listdir(DATA_DIR) if f.startswith("capture_") and f.endswith(".csv")]
 
     if not csv_files:
         print("[preprocessor] No capture files found in data/")
@@ -44,6 +44,8 @@ def clean_data(df):
 def encode_features(df):
     protocol_map = {"TCP": 0, "UDP": 1, "Other": 2}
     df["protocol"] = df["protocol"].map(protocol_map)
+    # fill any unmapped values with 2 (Other)
+    df["protocol"] = df["protocol"].fillna(2)
     print(f"[preprocessor] Encoded protocol column")
     return df
 
