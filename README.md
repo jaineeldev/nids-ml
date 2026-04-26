@@ -4,13 +4,9 @@
 
 ML-powered network intrusion detection system built in Python. Captures live network traffic, preprocesses it, and uses machine learning to classify connections as normal or malicious.
 
----
-
 ## Overview
 
 This project combines cybersecurity and machine learning to detect network intrusions and threats in real time. Built as a collaboration between a Cybersecurity student and a Machine Learning engineer.
-
----
 
 ## Features
 
@@ -23,7 +19,6 @@ This project combines cybersecurity and machine learning to detect network intru
 - [ ] ML model training and inference (in progress)
 - [ ] Live threat prediction on dashboard
 
----
 
 ## Project structure
 
@@ -48,7 +43,6 @@ nids-ml/
 └── requirements.txt   # Python dependencies
 ```
 
----
 
 ## Getting started
 
@@ -73,7 +67,6 @@ pip install -r requirements.txt
 4. Install Npcap (Windows only) for packet capture:
 > https://npcap.com/#download
 
----
 
 ## Usage
 
@@ -96,8 +89,6 @@ py dashboard/app.py
 
 Then open http://127.0.0.1:5000 in your browser.
 
----
-
 ## Tech stack
 
 | Area | Tools |
@@ -117,7 +108,6 @@ Then open http://127.0.0.1:5000 in your browser.
 | Cybersecurity & Infrastructure | [@jaineeldev](https://github.com/jaineeldev) |
 | Machine Learning & Modelling | [@NicholasNg380](https://github.com/NicholasNg380) |
 
----
 
 ## License
 
