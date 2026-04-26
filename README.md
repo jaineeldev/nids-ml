@@ -8,7 +8,6 @@ ML-powered network intrusion detection system built in Python. Captures live net
 
 This project combines cybersecurity and machine learning to detect network intrusions and threats in real time. Built as a collaboration between a Cybersecurity student and a Machine Learning engineer.
 
-
 ## Features
 
 - [x] Live packet capture using Scapy
@@ -19,6 +18,7 @@ This project combines cybersecurity and machine learning to detect network intru
 - [x] NSL-KDD dataset integration
 - [ ] ML model training and inference (in progress)
 - [ ] Live threat prediction on dashboard
+
 
 ## Project structure
 
@@ -43,6 +43,7 @@ nids-ml/
 └── requirements.txt   # Python dependencies
 ```
 
+
 ## Getting started
 
 1. Clone the repo:
@@ -65,6 +66,7 @@ pip install -r requirements.txt
 
 4. Install Npcap (Windows only) for packet capture:
 > https://npcap.com/#download
+
 
 ## Usage
 
@@ -96,6 +98,8 @@ Then open http://127.0.0.1:5000 in your browser.
 | ML / Data | Scikit-learn, Pandas, NumPy |
 | Dashboard | Flask |
 | Dataset | NSL-KDD |
+
+---
 
 ## Contributors
 
